@@ -1,0 +1,53 @@
+body{  
+    height: 100%;
+    margin: 0;
+}
+header{
+    width: 100%;
+    height: 82px;
+    background-color: tomato;
+    font-family: Lobster;
+    padding-left: 40px;
+    padding-top: 22px;
+    display: inline-block;
+}
+
+
+header h3{
+    font-size: 2.5rem;
+    margin: 0;
+    float: left;
+    width: 40%;
+}
+.header_sub{
+    float: left;
+    width:20%;
+    margin-left: 40%;
+}
+.container{
+    width: 100%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    
+}
+.content{
+    display : flex;
+    flex-direction : row;
+    background-color: #e9ebee;
+    height: 100%;
+}
+main{
+    width: 70%;
+    height: 100%;
+    border-right: solid 1px #d9e0e0;
+}
+aside{
+    width: 30%;
+    height: 100%;
+    font-family: Lobster;
+}
+.login_tag{
+    font-size: 2rem;
+}

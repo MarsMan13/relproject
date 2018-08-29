@@ -1,0 +1,50 @@
+{% extends 'project/base2.html' %}
+
+{% block style %}
+    <style>
+        .login_tag{
+            font-size: 3rem;
+            margin-bottom: 0;
+        }
+        .login_sys{
+            margin-left: 20px;
+        }
+        .header_sub{
+            margin-top: 20px;
+            color : #4a4a2a
+        }
+    </style>
+
+{% endblock %}
+
+<!------------------------------------------->
+
+{% block content %}
+    <div class="login_sys">
+     <h3 class="login_tag">login</h3>
+     <form class= "loginform" method="POST" >{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class ="save btn btn-default" value="Login"/>
+        <!--<a href={{ "signup" }}><input type="button" class="signup" value="SignUp"/></a>
+    -->    
+   </form>
+</div>
+    
+
+{% endblock %}
+
+<!------------------------------------------->
+
+{% block sub %}
+    {% if request.user.is_anonymous %}
+        <div class="header_sub">
+            <label>SignUp : &nbsp&nbsp<a href="{% url 'signup' %}"><input type="button" value="SignUp"></a></label> 
+        </div>
+    {% else %}
+        <div class="header_sub">
+            X
+        </div>
+    {% endif%}
+{% endblock %}
+
+

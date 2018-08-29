@@ -1,0 +1,53 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta charset="utf-8">    
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base2.css' %}">   
+    <meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    
+    <style>
+        html, body{
+            height: 100%;
+        }
+    </style>
+    {% block style %}
+    {% endblock %}
+
+</head>
+
+
+
+<body>
+    <div class="container">
+        <header>
+            <h3>ToTostagram</h3>
+            
+                {% block sub %}
+                {% endblock %}
+                
+        </header>
+        
+        <section class="content">
+            <main>
+            
+            </main>
+            <aside>
+                {% block content %}
+                {% endblock %}
+            </aside>   
+
+        </section>
+    
+    </div>
+        
+</body>
+</html>
